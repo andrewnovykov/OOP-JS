@@ -1,6 +1,6 @@
 class Vehicle {
-	constructor(licenceNum){
-		this.licenceNum = licenceNum;
+	constructor( ){
+		this.gpsEnabled = true;
 	}
 }
 
@@ -9,14 +9,15 @@ class Drone extends Vehicle {
 }
 
 class Car extends Vehicle {
-	constructor(licenceNum){
-		super(licenceNum);
+	constructor( ){
+		super( );
+		this.gpsEnabled = false;
 		
 	}
 }
 
 let car = new Car('123');
 
-console.log(car instanceof Vehicle);
+//console.log(car instanceof Vehicle);
 
-console.log(car.licenceNum);
+console.log(car.gpsEnabled);
