@@ -4,6 +4,10 @@ class Drone {
 		this.name = name;
 	}
 
+	static getCompany(){
+		console.log('drone ' + this.id + ' made in ' + this.name);
+	}
+
 	fly() {
 		console.log('drone ' + this.name + ' is flying');
 	}
