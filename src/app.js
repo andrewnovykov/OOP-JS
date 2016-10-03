@@ -1,7 +1,15 @@
 class Drone {
 	constructor(id, name){
-		this.id = id;
+		this._id = id;
 		this.name = name;
+	}
+
+	get id( ) {
+		return this._id;
+	}
+
+	set id(value) {
+		this._id = value;
 	}
 
 	static getCompany(){
@@ -17,6 +25,7 @@ class Drone {
 Drone.maxHeight = 2000; //static property
 
 let drone = new Drone('123', 'RUBUS');
+drone.id = '1111';
 let drone2 = new Drone('456', 'BRABUS');
 
 drone.fly();
