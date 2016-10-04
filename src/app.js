@@ -1,8 +1,29 @@
 import {Car} from './classes/car.js';
 import {Drone} from './classes/drone.js';
+import {fleet} from './fleet-data.js';
+import {FleetDataService} from './services/fleet-data-service.js';
 
-let car = new Car();
-let drone = new Drone();
 
-console.log(car);
-console.log(drone);
+
+let dataService = new FleetDataService();
+dataService.loadData(fleet);
+
+
+
+
+
+for(let e of dataService.errors)
+	console.log(e.message);
+
+
+
+
+
+// let car = new Car();
+// let drone = new Drone();
+
+
+// console.log(fleet);
+
+// console.log(car);
+// console.log(drone);
